@@ -1,0 +1,3 @@
+# react-native-exercices
+This project is for the react-native curse alot of exemples how its done
+Alot of tips for react-native create app and class function, funtional programming etc...
