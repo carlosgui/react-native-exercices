@@ -1,0 +1,20 @@
+{
+	"Componente Funcional": {
+		"scope": "javascript,typescript",
+		"prefix": "startReactComp",
+		"body": [
+			"import React, { useState } from 'react'",
+			"import { Button, Text } from 'react-native'",
+			"import styles from './estilo'",
+			"",
+			"export default props => {",
+			"",
+				"return (",
+				"",
+				")",
+			"",
+    		"}",
+		],
+		"description": "Log output to console"
+	}
+}
