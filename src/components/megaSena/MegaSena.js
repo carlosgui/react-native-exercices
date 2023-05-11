@@ -14,23 +14,26 @@ export default class MegaSena extends Component {
     }
 
     generateRandomNumberBetweenZeroSixty = number => {
+        console.log(number)
         const newNumber = parseInt(Math.random() * 25) + 1
         return number.includes(newNumber) ? this.generateRandomNumberBetweenZeroSixty(number) : newNumber
     }
 
     generateNumbersActionButton = () => {
+        console.log(this.state.numberAmount)
         const generatedNumbers = Array(this.state.numberAmount)
                                     .fill()
                                     .reduce(value => [...value, this.generateRandomNumberBetweenZeroSixty(value)], [])
                                     .sort((a,b) => a - b)
 
+                                    console.log(generatedNumbers)
         this.setState({generatedNumbers})
     }
 
     showNumbers = () => {
         const nums = this.state.generatedNumbers
-        return nums.map(value => {
-           return <MegaSenaNumbers numb={value}/>
+        return nums.map((value, index) => {
+           return <MegaSenaNumbers key={index} numb={value}/>
         })
     }
 
